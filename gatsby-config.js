@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/random-album",
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
