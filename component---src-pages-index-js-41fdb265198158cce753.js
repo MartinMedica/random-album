@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkrandom_album=self.webpackChunkrandom_album||[]).push([[678],{558:function(e,t,n){n.r(t);var a=n(294),l=function(e){return e[Math.floor(Math.random()*e.length)]};t.default=function(e){var t=e.data.file.childrenAlbumsCsv,n=(0,a.useState)(l(t)),u=n[0],r=n[1];return a.createElement(a.Fragment,null,a.createElement("p",null,u.title),a.createElement("button",{onClick:function(e){e.preventDefault(),r(l(t))}},"Get Random  Album"))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-41fdb265198158cce753.js.map
