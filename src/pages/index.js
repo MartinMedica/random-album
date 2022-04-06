@@ -18,10 +18,10 @@ const IndexPage = ({data}) => {
   // album.title.replace(/\-/g, '').replace(/\s+/g, '_')
   useEffect(() => {
     setWiki('');
+    setLink('')
     searchArticle(`${album.artist} ${album.title}`, 
       (err, data)=>{
         if(!err &&  data.query.search[0]){
-          console.log(data);
           setLink(`https://en.wikipedia.org/wiki/${data.query.search[0].title}`)
           getArticle(data.query.search[0].title, 
             (err, data)=>{
@@ -44,7 +44,7 @@ const IndexPage = ({data}) => {
         e.preventDefault();
         setAlbum(getRandomAlbum(albums))
       }}>Get Random  Album</button>
-      <p>Extract obtained from wikipedia: <a href={link}  rel="noopener noreferrer" target="_blank">go to original article</a></p>
+      { link  && <p>Extract obtained from wikipedia: <a href={link}  rel="noopener noreferrer" target="_blank">go to original article</a></p> }
       <div>
         {ReactHtmlParser(wiki)}
       </div>
