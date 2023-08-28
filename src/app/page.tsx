@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
 import { albums, Album } from '../../lib/albums';
 
-export function getRandomAlbum(): Album {
+function getRandomAlbum(): Album {
 	return albums[Math.floor(Math.random() * (albums.length - 1))];
 }
 
