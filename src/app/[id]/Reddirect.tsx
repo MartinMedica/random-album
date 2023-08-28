@@ -1,5 +1,4 @@
 'use client';
-import { redirect } from 'next/navigation';
 import { Album } from '../../../lib/albums';
 
 export function getRandomAlbum(albums: Album[]): Album {

@@ -1,4 +1,3 @@
-import ReactHtmlParser from 'react-html-parser';
 import { getArticle } from '../../../lib/api/wikipedia';
 
 export default async function Wikipedia({ title }: { title: string }) {
@@ -20,7 +19,7 @@ export default async function Wikipedia({ title }: { title: string }) {
 					</a>
 				</p>
 			)}
-			{ReactHtmlParser(content)}
+			<div dangerouslySetInnerHTML={{ __html: content }}></div>
 		</main>
 	);
 }
