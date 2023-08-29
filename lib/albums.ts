@@ -8,6 +8,7 @@ export type Album = {
 	title: string | undefined;
 	info: string | undefined;
 	tags: string[] | undefined;
+	coverUrl?: string | undefined;
 };
 
 const getAlbums = () => {
@@ -16,7 +17,7 @@ const getAlbums = () => {
 	const albums = albumsData.split('\n').map((albumData, index) => {
 		const album = albumData.split(',');
 		return {
-			id: index,
+			id: index - 1,
 			artist: album[0],
 			title: album[1],
 			info: album[2],

@@ -1,4 +1,4 @@
-import { getArticle } from '../../../lib/api/wikipedia';
+import { getArticle } from '../../../../lib/api/wikipedia';
 
 export default async function Wikipedia({ title }: { title: string }) {
 	const link = `https://en.wikipedia.org/wiki/${title}`;

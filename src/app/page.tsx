@@ -8,5 +8,5 @@ function getRandomAlbum(): Album {
 export default function Home() {
 	const album: Album = getRandomAlbum();
 
-	return redirect(`${album.id}`);
+	return redirect(`album/${album.id}`);
 }
