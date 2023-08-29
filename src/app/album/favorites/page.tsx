@@ -24,7 +24,7 @@ const FavoriteAlbum = ({ album }: { album: Album }) => (
 	</>
 );
 
-export default function Home({ params }: { params: { id: number } }) {
+export default function Favorites() {
 	const favorites = getFavoritesAlbums();
 	return (
 		<div className="min-h-screen w-full bg-violet-400">

@@ -2,7 +2,7 @@
 import { Album } from './albums';
 
 export const getFavoritesAlbums = () => {
-	if (!window) {
+	if (typeof window === 'undefined') {
 		return [];
 	}
 
@@ -16,7 +16,7 @@ export const addAlbumToFavorites = (album: Album) => {
 
 	favorites.push(album);
 
-	if (!window) {
+	if (typeof window === 'undefined') {
 		return;
 	}
 	window.localStorage.setItem(
@@ -30,7 +30,7 @@ export const removeAlbumFromFavorites = (album: Album) => {
 		(fav: Album) => fav.id !== album.id
 	);
 
-	if (!window) {
+	if (typeof window === 'undefined') {
 		return;
 	}
 

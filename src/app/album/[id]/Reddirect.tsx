@@ -11,7 +11,7 @@ export default function ReddirectAlbum({ albums }: { albums: Album[] }) {
 			className="m-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
 			onClick={() => {
 				const album: Album = getRandomAlbum(albums);
-				if (window) {
+				if (typeof window !== 'undefined') {
 					window.location.assign(`${album.id}`);
 				}
 			}}
