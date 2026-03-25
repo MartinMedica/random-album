@@ -2,7 +2,7 @@
 import { Album } from '../../../lib/albums';
 
 export function getRandomAlbum(albums: Album[]): Album {
-  return albums[Math.floor(Math.random() * (albums.length - 1))];
+  return albums[Math.floor(Math.random() * (albums.length))];
 }
 
 export default function ReddirectAlbum({ albums }: { albums: Album[] }) {

@@ -11,7 +11,7 @@ export type Album = {
 };
 
 export function getRandomAlbum(): Album {
-  return albums[Math.floor(Math.random() * (albums.length - 1))];
+  return albums[Math.floor(Math.random() * (albums.length))];
 }
 
 const getAlbums = () => {

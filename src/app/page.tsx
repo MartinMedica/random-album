@@ -6,3 +6,5 @@ export default function Home() {
 
   return redirect(`${album.id}`);
 }
+
+export const dynamic = 'force-dynamic';
