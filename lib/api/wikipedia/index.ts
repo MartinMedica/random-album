@@ -14,9 +14,6 @@ export const getArticle = async (title: string) => {
     .then((data) => {
       let page = data.query.pages;
       let pageId = Object.keys(page)[0];
-      console.log(page)
-      console.log(pageId)
-      console.log(page[pageId])
       return page[pageId].extract;
     });
 };
